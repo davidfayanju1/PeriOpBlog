@@ -1,4 +1,3 @@
-import React from "react";
 import DefaultLayout from "../layout/DefaultLayout";
 import HomeComp from "../components/modules/home/HomeComp";
 

@@ -1,5 +1,3 @@
-import React from "react";
-
 const Footer = () => {
   return (
     <div className="w-full bg-blue-950 min-h-[15rem] px-4 py-[4rem] flex items-center jusitfy-center flex-wrap">
