@@ -33,7 +33,7 @@ const Nav = () => {
     <div>
       <nav className="item_container fixed top-0 left-0 flex items-center justify-between w-full min-h-[6rem] bg-white md:px-[2rem] px-[1rem]">
         <div className="text_title">
-          <h1 className="font-bold md:text-[1.5rem] text-[1.2rem] font-mono">
+          <h1 className="font-bold md:text-[1.5rem] text-[1.2rem] poppins-bold">
             POB.
           </h1>
         </div>
@@ -41,7 +41,10 @@ const Nav = () => {
         <ul className="md:block hidden">
           <li className=" flex items-center justify-center gap-4">
             {links.map((item) => (
-              <Link to={item.route} className="font-semibold text-[1rem]">
+              <Link
+                to={item.route}
+                className="font-semibold poppins-regular text-[1rem]"
+              >
                 {item.name}
               </Link>
             ))}
@@ -52,7 +55,10 @@ const Nav = () => {
           <ul className="block md:hidden bg-white absolute top-[6rem] left-0 w-full p-5 min-h-[15rem]">
             <li className=" flex flex-col items-center justify-center gap-4">
               {links.map((item) => (
-                <Link to={item.route} className="font-semibold text-[1rem]">
+                <Link
+                  to={item.route}
+                  className="font-semibold poppins-regular text-[1rem]"
+                >
                   {item.name}
                 </Link>
               ))}
