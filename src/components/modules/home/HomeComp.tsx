@@ -30,9 +30,9 @@ const HomeComp = () => {
 
           <div className="picture_container md:block hidden w-[40%] rounded-[10px] overflow-hidden">
             <img
-              src="/images/useThis.jpg"
+              src="/images/heroOfficial.jpg"
               alt="hero-image"
-              className="h-[30rem] w-full"
+              className="h-[25rem] w-full"
             />
           </div>
         </section>
