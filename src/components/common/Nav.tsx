@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
@@ -26,6 +27,8 @@ const Nav = () => {
     },
   ];
 
+  const [toggle, setToggle] = useState(false);
+
   return (
     <div>
       <nav className="item_container fixed top-0 left-0 flex items-center justify-between w-full min-h-[6rem] bg-white md:px-[2rem] px-[1rem]">
@@ -45,6 +48,18 @@ const Nav = () => {
           </li>
         </ul>
 
+        {toggle && (
+          <ul className="block md:hidden bg-white absolute top-[6rem] left-0 w-full p-5 min-h-[15rem]">
+            <li className=" flex flex-col items-center justify-center gap-4">
+              {links.map((item) => (
+                <Link to={item.route} className="font-semibold text-[1rem]">
+                  {item.name}
+                </Link>
+              ))}
+            </li>
+          </ul>
+        )}
+
         <div className="icon_container flex items-center justify-center gap-5 h-full">
           <button className="text-[1.1rem] text-black">
             <i className="fa-solid fa-magnifying-glass"></i>
@@ -53,8 +68,15 @@ const Nav = () => {
             <i className="fa-solid fa-cart-shopping"></i>
           </button>
 
-          <button className="text-black text-[1.1rem] md:hidden block">
-            <i className="fa-solid fa-bars"></i>
+          <button
+            onClick={() => setToggle(!toggle)}
+            className="text-black text-[1.1rem] md:hidden block"
+          >
+            {toggle ? (
+              <i className="fa-solid fa-xmark"></i>
+            ) : (
+              <i className="fa-solid fa-bars"></i>
+            )}
           </button>
         </div>
       </nav>
