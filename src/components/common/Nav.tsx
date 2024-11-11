@@ -31,7 +31,7 @@ const Nav = () => {
 
   return (
     <div>
-      <nav className="item_container fixed top-0 left-0 flex items-center justify-between w-full min-h-[6rem] bg-white md:px-[2rem] px-[1rem]">
+      <nav className="item_container z-30 fixed top-0 left-0 flex items-center justify-between w-full min-h-[6rem] bg-white md:px-[2rem] px-[1rem]">
         <div className="text_title">
           <h1 className="font-bold md:text-[1.5rem] text-[1.2rem] poppins-bold">
             POB.
