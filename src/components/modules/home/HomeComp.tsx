@@ -4,7 +4,7 @@ const HomeComp = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       <div className="item-container md:h-[35rem] h-[69rem] flex items-center md:flex-row flex-col justify-center gap-10 p-3 w-full">
-        <section className="section_container flex items-center justify-between overflow-hidden md:px-[3.5rem] md:py-[3rem] h-full bg-white rounded-[10px] md:w-[70%] w-full">
+        <section className="section_container flex items-center justify-between overflow-hidden md:px-[3.5rem] md:py-[3rem] h-full bg-white shadow-lg rounded-[10px] md:w-[70%] w-full">
           <div className="mobile_image_container md:hidden relative block h-full w-full">
             <div className="bg-[#000000]/25 z-10 h-full w-full absolute top-0 left-0 right-0 bottom-0"></div>
             <img
@@ -73,10 +73,11 @@ const HomeComp = () => {
             />
           </div>
         </section>
-        <section className="h-full relative bg-white md:w-[25%] w-full rounded-[10px] overflow-hidden">
-          <div className="bubble rounded-full bg-gray-300 h-[8rem] w-[8rem] ml-[-3rem] mt-[-3rem]"></div>
-          <div className="bubble absolute right-[5%] rounded-full bg-gray-300 h-[2.8rem] w-[2.8rem]"></div>
-          <div className="book_container">
+        <section className="h-full relative bg-[#F3F3F3] shadow-lg md:w-[25%] w-full rounded-[10px] overflow-hidden flex items-center justify-center">
+          <div className="item_container h-[50rem] w-[40rem] absolute z-0 top-[-20%] left-[-25%] right-0 flex items-center justify-center">
+            <img src="/icons/circles.svg" alt="" className="w-full h-full" />
+          </div>
+          <div className="book_container relative z-50000">
             <h1 className="poppins-semibold mb-3 text-[#0358BD] text-center text-[1.8rem]">
               NEW RELEASE
             </h1>
@@ -101,7 +102,6 @@ const HomeComp = () => {
                 onPress={() => console.log("Ok")}
               />
             </div>
-            <div className="bubble absolute bottom-[10%] left-[5%] rounded-full bg-gray-300 h-[2.8rem] w-[2.8rem]"></div>
           </div>
         </section>
       </div>
