@@ -17,7 +17,7 @@ const HomeComp = () => {
                 WELCOME TO PERIOPBLOG
               </h1>
               <span className="block poppins-regular mt-1 text-white md:text-left text-center text-[1rem] w-full">
-                A house to millions of digital and non-digital books.
+                Home to millions of digital and non-digital books.
               </span>
 
               <div className="input_container flex items-center px-7 justify-center border-solid mt-9 border-[2px] border-white rounded-full md:w-[60%] w-full h-[3rem]">
@@ -37,14 +37,15 @@ const HomeComp = () => {
           </div>
 
           <div className="desktop-container h-full md:flex flex-col justify-center hidden">
-            <h1 className="poppins-bold md:w-[70%] w-full md:text-left text-center md:text-[3vw] text-[2rem]">
+            <h1 className="poppins-bold text-[#0358BD] mb-3 leading-tight md:w-[70%] w-full md:text-left text-center md:text-[3vw] text-[2rem]">
               WELCOME TO PERIOPBLOG
             </h1>
-            <span className="block poppins-regular mt-1 text-gray-400 md:text-left text-center text-[1rem] md:w-[60%] w-full">
-              A house to millions of digital and non-digital books.
+            <span className="block poppins-regular mt-1 text-gray-400 md:text-left text-center text-[.92rem] md:w-[68%] w-full">
+              Home to millions of digital and non-digital books. <br /> Elevate
+              Your Practice with Every Click.
             </span>
 
-            <div className="input_container flex items-center px-7 justify-center border-solid mt-9 border-[2px] border-black rounded-full md:w-[60%] w-full h-[3rem]">
+            <div className="input_container flex items-center px-7 justify-center border-solid mt-9 border-[1px] border-gray-400 rounded-full md:w-[65%] w-full h-[3rem]">
               <input
                 type="text"
                 className="outline-none poppins-regular placeholder:text-[14px] bg-transparent w-full text-[16px]"
@@ -54,16 +55,21 @@ const HomeComp = () => {
               <Button
                 title="Search"
                 onPress={() => console.log("ok")}
-                buttonStyle="h-full bg-black poppins-medium text-white font-semibold w-full mr-[-2rem] rounded-full"
+                buttonStyle="h-full bg-[#0358BD] poppins-medium text-white font-semibold w-full mr-[-2rem] rounded-full"
               />
             </div>
           </div>
 
-          <div className="picture_container md:block hidden w-[45%] rounded-[10px] overflow-hidden">
+          <div className="picture_container relative h-[26rem] md:block hidden w-[50%] rounded-full">
             <img
-              src="/images/heroOfficial.jpg"
+              src="/images/Opeyemi.jpg"
               alt="hero-image"
-              className="h-[25rem] w-full object-cover"
+              className="h-full rounded-full w-full object-cover object-right border-r-[18px] border-[#0358BD]"
+            />
+            <img
+              src="/images/myImage.jpg"
+              alt=""
+              className="rounded-full absolute left-[-15%] bottom-[-3%] h-[12rem] w-[12rem] object-top"
             />
           </div>
         </section>
@@ -71,7 +77,7 @@ const HomeComp = () => {
           <div className="bubble rounded-full bg-gray-300 h-[8rem] w-[8rem] ml-[-3rem] mt-[-3rem]"></div>
           <div className="bubble absolute right-[5%] rounded-full bg-gray-300 h-[2.8rem] w-[2.8rem]"></div>
           <div className="book_container">
-            <h1 className="poppins-semibold mb-3 text-center text-[1.8rem]">
+            <h1 className="poppins-semibold mb-3 text-[#0358BD] text-center text-[1.8rem]">
               NEW RELEASE
             </h1>
             <div className="book_container mb-4 h-[12rem] mx-auto">
@@ -82,16 +88,16 @@ const HomeComp = () => {
               />
             </div>
             <div className="texts">
-              <span className="title block poppins-semibold text-center text-[20px]">
+              <span className="title block text-[#0358BD] poppins-semibold text-center text-[20px]">
                 The Shift
               </span>
-              <span className="author block poppins-regular text-center text-gray-400 text-[16px]">
+              <span className="author block poppins-regular text-center text-gray-400 text-[14px]">
                 Theresa Brown
               </span>
 
               <Button
                 title="Preview"
-                buttonStyle="bg-black text-white poppins-medium mt-4 rounded-full h-[3rem] w-[50%] mx-auto"
+                buttonStyle="bg-[#0358BD] text-white poppins-medium mt-4 rounded-full h-[3rem] w-[50%] mx-auto"
                 onPress={() => console.log("Ok")}
               />
             </div>
