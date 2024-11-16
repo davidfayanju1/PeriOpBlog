@@ -178,21 +178,21 @@ const HomeComp = () => {
       </section>
 
       <section className="howitworks pb-[2rem]">
-        <h1 className="text-center font-semibold mb-6 text-[1rem] poppins-regular">
+        <h1 className="text-center font-semibold mb-8 text-[1rem] poppins-regular">
           How it works
         </h1>
-        <div className="flow_blob flex md:flex-row flex-col items-center justify-around">
+        <div className="flow_blob flex md:flex-row flex-col items-center justify-around gap-[2rem]">
           {userStory.map((item) => (
             <div>
               <div
                 key={item.name}
                 className="item_card blob text-center mx-auto flex items-center justify-center"
               >
-                <span className="block text-white text-[1.2rem] inner-text">
+                <span className="block text-white text-[1.34rem] inner-text">
                   {item.icon}
                 </span>
               </div>
-              <span className="block text poppins-regular text-[.7rem] mt-5 text-center">
+              <span className="block text poppins-regular text-[.7rem] md:mt-5 mt-3 text-center">
                 {item.action}
               </span>
             </div>
