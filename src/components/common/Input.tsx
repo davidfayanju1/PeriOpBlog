@@ -16,7 +16,7 @@ interface InputProps {
   options?: SelectOption[]; // Options for select input
 }
 
-const Input: React.FC<InputProps> = ({
+const Input = ({
   placeholder,
   label,
   handleChangeText,
@@ -26,7 +26,7 @@ const Input: React.FC<InputProps> = ({
   type,
   options = [],
   ...props
-}) => {
+}: InputProps) => {
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {

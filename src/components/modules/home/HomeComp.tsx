@@ -1,24 +1,33 @@
+import { generateYearOptions } from "../../../lib/Date";
 import Button from "../../common/Button";
 import Input from "../../common/Input";
 import React, { useState } from "react";
 
-interface searchState {
+interface SearchState {
   title: string;
   author: string;
   year: number;
 }
 
-const HomeComp: React.FC = () => {
-  const [search, setSearch] = useState<searchState>({
+const HomeComp = () => {
+  const [search, setSearch] = useState<SearchState>({
     title: "",
     author: "",
     year: 2024,
   });
-  const yearOptions = [
-    { value: 2023, label: "2023" },
-    { value: 2024, label: "2024" },
-    { value: 2025, label: "2025" },
-  ];
+
+  const startYear = 1990;
+
+  const endYear = new Date().getFullYear();
+
+  const yearOptions = generateYearOptions(startYear, endYear);
+
+  const handleInputChange = (field: string, value: string | number) => {
+    setSearch((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
+  };
 
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -103,7 +112,7 @@ const HomeComp: React.FC = () => {
             placeholder="Enter Author Name"
             label=""
             type="text"
-            handleChangeText={() => console.log("Ok")}
+            handleChangeText={(value) => handleInputChange("author", value)}
             value={search.author}
             containerStyle="border-solid border-gray-300 border-[1px] rounded-full px-[.9rem] w-full py-3"
             inputStyle="text-[16px]"
@@ -112,7 +121,7 @@ const HomeComp: React.FC = () => {
             type="select"
             placeholder="Enter Year"
             label=""
-            handleChangeText={() => console.log("Ok")}
+            handleChangeText={(value) => handleInputChange("year", value)}
             value={search.year}
             containerStyle="border-solid border-gray-300 border-[1px] rounded-full px-[.9rem] w-full py-3"
             options={yearOptions}
