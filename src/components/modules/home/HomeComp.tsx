@@ -1,9 +1,28 @@
 import Button from "../../common/Button";
+import Input from "../../common/Input";
+import React, { useState } from "react";
 
-const HomeComp = () => {
+interface searchState {
+  title: string;
+  author: string;
+  year: number;
+}
+
+const HomeComp: React.FC = () => {
+  const [search, setSearch] = useState<searchState>({
+    title: "",
+    author: "",
+    year: 2024,
+  });
+  const yearOptions = [
+    { value: 2023, label: "2023" },
+    { value: 2024, label: "2024" },
+    { value: 2025, label: "2025" },
+  ];
+
   return (
     <div className="bg-gray-50 min-h-screen">
-      <div className="item-container md:h-[35rem] h-[79rem] flex items-center md:flex-row flex-col justify-center gap-10 p-3 w-full">
+      <div className="item-container md:h-[35rem] h-[79rem] flex items-center md:flex-row flex-col justify-center gap-10 p-3 py-[3rem] w-full">
         <section className="section_container flex md:flex-row flex-col items-center justify-between overflow-hidden bg-white md:px-[3.5rem] py-[3rem] h-full shadow-lg rounded-[10px] md:w-[70%] w-full">
           <div className="desktop-container h-full flex flex-col justify-center">
             <h1 className="poppins-bold text-[#0358BD] mb-3 leading-tight md:w-[70%] w-full md:text-left text-center md:text-[3vw] text-[1.4rem]">
@@ -20,6 +39,7 @@ const HomeComp = () => {
                   type="text"
                   className="outline-none poppins-regular placeholder:text-[14px] bg-transparent w-full text-[16px]"
                   placeholder="Write Title Here"
+                  value={search.title}
                 />
 
                 <Button
@@ -76,6 +96,37 @@ const HomeComp = () => {
           </div>
         </section>
       </div>
+
+      <section className="section_container min-h-[10rem] w-full md:px-[2.5rem] px-[.9rem] flex items-center justify-start md:gap-4 gap-2">
+        <div className="item_container flex items-center justify-center gap-5 md:w-[70%] w-[80%]">
+          <Input
+            placeholder="Enter Author Name"
+            label=""
+            type="text"
+            handleChangeText={() => console.log("Ok")}
+            value={search.author}
+            containerStyle="border-solid border-gray-300 border-[1px] rounded-full px-[.9rem] w-full py-3"
+            inputStyle="text-[16px]"
+          />
+          <Input
+            type="select"
+            placeholder="Enter Year"
+            label=""
+            handleChangeText={() => console.log("Ok")}
+            value={search.year}
+            containerStyle="border-solid border-gray-300 border-[1px] rounded-full px-[.9rem] w-full py-3"
+            options={yearOptions}
+            inputStyle="text-[16px] w-full"
+          />
+        </div>
+        <div className="button_container md:w-[10%] w-[20%]">
+          <Button
+            title="Search"
+            buttonStyle="bg-[#0358BD] text-white poppins-medium rounded-full h-[3rem] w-full"
+            onPress={() => console.log("Ok")}
+          />
+        </div>
+      </section>
     </div>
   );
 };
