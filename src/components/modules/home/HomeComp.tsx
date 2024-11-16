@@ -58,8 +58,8 @@ const HomeComp = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <div className="item-container md:h-[35rem] h-[79rem] flex items-center md:flex-row flex-col justify-center gap-10 p-3 py-[3rem] w-full">
-        <section className="section_container flex md:flex-row flex-col items-center justify-between overflow-hidden bg-white md:px-[3.5rem] py-[3rem] h-full shadow-lg rounded-[10px] md:w-[70%] w-full gap-[1.5rem]">
+      <div className="item-container md:h-[35rem] h-[79rem] flex items-center md:flex-row flex-col justify-center gap-10 p-3 py-[1rem] w-full">
+        <section className="section_container flex md:flex-row flex-col items-center justify-between overflow-hidden bg-white md:px-[3.5rem] py-[3rem] h-full md:shadow-lg shadow-md rounded-[10px] md:w-[70%] w-full gap-[1.5rem]">
           <div className="desktop-container h-full flex flex-col justify-center">
             <h1 className="poppins-bold text-[#0358BD] mb-3 leading-tight md:w-[70%] w-full md:text-left text-center md:text-[3vw] text-[1.4rem]">
               WELCOME TO PERIOPBLOG
@@ -70,7 +70,7 @@ const HomeComp = () => {
             </span>
 
             <div className="item_container px-3">
-              <div className="input_container flex items-center px-7 justify-center border-solid mt-9 border-[1px] border-gray-400 rounded-full md:w-[65%] w-full h-[3rem]">
+              <div className="input_container flex items-center px-7 justify-center border-solid mt-9 border-[1px] border-gray-400 rounded-full md:w-[65%] w-full md:h-[3rem] h-[2.5rem]">
                 <input
                   type="text"
                   className="outline-none poppins-regular placeholder:text-[14px] bg-transparent w-full text-[16px]"
@@ -87,12 +87,14 @@ const HomeComp = () => {
             </div>
           </div>
 
-          <div className="picture_container relative md:h-[26rem] h-[24rem] md:w-[50%] w-[70%] rounded-full">
-            <img
-              src="/images/Opeyemi.jpg"
-              alt="hero-image"
-              className="h-full rounded-full w-[25rem] object-cover object-right border-r-[18px] border-[#0358BD]"
-            />
+          <div className="picture_container relative mx-auto md:w-[50%] w-[70%]">
+            <div className="image_container md:max-h-[25rem] max-h-[22rem] md:h-[80%] h-full w-full rounded-full max-w-[25rem] md:min-w-[15rem] min-w-[19rem] overflow-hidden border-r-[18px] border-[#0358BD]">
+              <img
+                src="/images/Opeyemi.jpg"
+                alt="hero-image"
+                className=" object-cover w-full h-full"
+              />
+            </div>
             <img
               src="/images/myImage.jpg"
               alt=""
