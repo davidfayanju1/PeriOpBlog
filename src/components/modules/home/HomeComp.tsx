@@ -29,6 +29,33 @@ const HomeComp = () => {
     }));
   };
 
+  const userStory = [
+    {
+      name: "First",
+      action: "Sign Up/ Login",
+    },
+
+    {
+      name: "Second",
+      action: "Pick The book",
+    },
+
+    {
+      name: "Third",
+      action: "Add to Cart",
+    },
+
+    {
+      name: "Fourth",
+      action: "Pay the bill",
+    },
+
+    {
+      name: "Fifth",
+      action: "Download your Digital Asset",
+    },
+  ];
+
   return (
     <div className="bg-gray-50 min-h-screen">
       <div className="item-container md:h-[35rem] h-[79rem] flex items-center md:flex-row flex-col justify-center gap-10 p-3 py-[3rem] w-full">
@@ -134,6 +161,22 @@ const HomeComp = () => {
             buttonStyle="bg-[#0358BD] text-white poppins-medium rounded-full h-[3rem] w-full"
             onPress={() => console.log("Ok")}
           />
+        </div>
+      </section>
+
+      <section className="howitworks pb-[2rem]">
+        <h1 className="text-center font-semibold text-[1rem]">How it works</h1>
+        <div className="flow_blob">
+          {userStory.map((item) => (
+            <div
+              key={item.name}
+              className="item_card blob text-center flex items-center justify-center"
+            >
+              <span className="block text-white text-[1rem] inner-text">
+                {item.action}
+              </span>
+            </div>
+          ))}
         </div>
       </section>
     </div>

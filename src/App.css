@@ -115,3 +115,15 @@
   font-weight: 900;
   font-style: italic;
 }
+
+.blob {
+  background: linear-gradient(135deg, #6ee7b7 0%, #3b82f6 100%);
+  width: 150px;
+  height: 150px;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  transform: rotate(45deg);
+  position: relative;
+}
+.inner-text {
+  transform: rotate(-45deg);
+}
