@@ -64,12 +64,14 @@ const HomeComp = () => {
             <h1 className="poppins-bold text-[#0358BD] mb-3 leading-tight md:w-[70%] w-full md:text-left text-center md:text-[3vw] text-[1.4rem]">
               WELCOME TO PERIOPBLOG
             </h1>
-            <span className="block poppins-regular mt-1 text-gray-400 md:text-left text-center text-[.92rem] md:w-[68%] w-full">
-              Home to millions of digital and non-digital books. <br /> Elevate
-              Your Practice with Every Click.
+            <span className="block poppins-regular mt-1 text-gray-400 md:text-left text-center text-[.8rem] md:text-[.9rem] md:w-[68%] w-full">
+              Home to millions of digital and non-digital books.
+            </span>
+            <span className="text-gray-400 md:text-left text-center text-[.8rem] md:text-[.9rem] md:w-[68%] w-full">
+              Elevate Your Practice with Every Click.
             </span>
 
-            <div className="item_container px-3">
+            <div className="item_container pr-3">
               <div className="input_container flex items-center px-7 justify-center border-solid mt-9 border-[1px] border-gray-400 rounded-full md:w-[65%] w-full md:h-[3rem] h-[2.5rem]">
                 <input
                   type="text"
@@ -88,7 +90,7 @@ const HomeComp = () => {
           </div>
 
           <div className="picture_container relative mx-auto md:w-[50%] w-[70%]">
-            <div className="image_container md:max-h-[25rem] max-h-[22rem] md:h-[80%] h-full w-full rounded-full max-w-[25rem] md:min-w-[15rem] min-w-[19rem] overflow-hidden border-r-[18px] border-[#0358BD]">
+            <div className="image_container md:max-h-[25rem] max-h-[22rem] md:h-[80%] h-full w-full rounded-full max-w-[25rem] md:min-w-[15rem] min-w-[15rem] overflow-hidden border-r-[18px] border-[#0358BD]">
               <img
                 src="/images/Opeyemi.jpg"
                 alt="hero-image"
@@ -98,7 +100,7 @@ const HomeComp = () => {
             <img
               src="/images/myImage.jpg"
               alt=""
-              className="rounded-full absolute left-[-15%] bottom-[-3%] h-[12rem] w-[12rem] object-top"
+              className="rounded-full absolute left-[-15%] bottom-[-3%] md:h-[12rem] h-[9rem] md:w-[12rem] w-[9rem] object-top"
             />
           </div>
         </section>
@@ -136,14 +138,14 @@ const HomeComp = () => {
       </div>
 
       <section className="section_container min-h-[10rem] w-full md:px-[2.5rem] px-[.5rem] flex items-center justify-start md:gap-4 gap-2">
-        <div className="item_container flex items-center justify-center md:gap-5 gap-2 md:w-[70%] w-[80%]">
+        <div className="item_container flex items-center justify-center md:gap-5 gap-2 md:w-[70%] w-[89%]">
           <Input
             placeholder="Enter Author Name"
             label=""
             type="text"
             handleChangeText={(value) => handleInputChange("author", value)}
             value={search.author}
-            containerStyle="border-solid border-gray-300 border-[1px] rounded-full px-[.9rem] w-full py-3"
+            containerStyle="border-solid w-[55%] border-gray-300 border-[1px] rounded-full px-[.9rem] py-3"
             inputStyle="text-[16px]"
           />
           <Input
@@ -152,7 +154,7 @@ const HomeComp = () => {
             label=""
             handleChangeText={(value) => handleInputChange("year", value)}
             value={search.year}
-            containerStyle="border-solid border-gray-300 border-[1px] rounded-full px-[.9rem] w-full py-3"
+            containerStyle="border-solid border-gray-300 border-[1px] rounded-full px-[.9rem] w-[45%] py-3"
             options={yearOptions}
             inputStyle="text-[16px] w-full"
           />
@@ -160,14 +162,16 @@ const HomeComp = () => {
         <div className="button_container md:w-[10%] w-[25%]">
           <Button
             title="Search"
-            buttonStyle="bg-[#0358BD] text-white poppins-medium rounded-full h-[3rem] w-full"
+            buttonStyle="bg-[#0358BD] text-white poppins-medium rounded-full h-[3rem] w-full text-[.9rem]"
             onPress={() => console.log("Ok")}
           />
         </div>
       </section>
 
       <section className="howitworks pb-[2rem]">
-        <h1 className="text-center font-semibold text-[1rem]">How it works</h1>
+        <h1 className="text-center font-semibold text-[1rem] poppins-regular">
+          How it works
+        </h1>
         <div className="flow_blob">
           {userStory.map((item) => (
             <div
