@@ -1,7 +1,7 @@
 import { generateYearOptions } from "../../../lib/Date";
 import Button from "../../common/Button";
 import Input from "../../common/Input";
-import React, { useState } from "react";
+import { useState } from "react";
 
 interface SearchState {
   title: string;
