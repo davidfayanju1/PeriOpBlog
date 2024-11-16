@@ -41,7 +41,7 @@ const Input = ({
       {type === "text" ? (
         <input
           type="text"
-          className={`outline-none poppins-regular w-full bg-transparent border-none ${inputStyle}`}
+          className={`outline-none placeholder:text-[14px] poppins-regular w-full bg-transparent border-none ${inputStyle}`}
           placeholder={placeholder}
           onChange={handleChange}
           value={value}

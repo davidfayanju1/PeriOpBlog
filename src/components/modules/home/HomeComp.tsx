@@ -2,7 +2,11 @@ import { generateYearOptions } from "../../../lib/Date";
 import Button from "../../common/Button";
 import Input from "../../common/Input";
 import { useState } from "react";
-
+import { PiSignIn } from "react-icons/pi";
+import { GiBookshelf } from "react-icons/gi";
+import { BsCartPlus } from "react-icons/bs";
+import { RiSecurePaymentLine } from "react-icons/ri";
+import { FaDownload } from "react-icons/fa6";
 interface SearchState {
   title: string;
   author: string;
@@ -33,26 +37,31 @@ const HomeComp = () => {
     {
       name: "First",
       action: "Sign Up/ Login",
+      icon: <PiSignIn />,
     },
 
     {
       name: "Second",
       action: "Pick The book",
+      icon: <GiBookshelf />,
     },
 
     {
       name: "Third",
       action: "Add to Cart",
+      icon: <BsCartPlus />,
     },
 
     {
       name: "Fourth",
       action: "Pay the bill",
+      icon: <RiSecurePaymentLine />,
     },
 
     {
       name: "Fifth",
       action: "Download your Digital Asset",
+      icon: <FaDownload />,
     },
   ];
 
@@ -169,16 +178,21 @@ const HomeComp = () => {
       </section>
 
       <section className="howitworks pb-[2rem]">
-        <h1 className="text-center font-semibold text-[1rem] poppins-regular">
+        <h1 className="text-center font-semibold mb-6 text-[1rem] poppins-regular">
           How it works
         </h1>
-        <div className="flow_blob">
+        <div className="flow_blob flex md:flex-row flex-col items-center justify-around">
           {userStory.map((item) => (
-            <div
-              key={item.name}
-              className="item_card blob text-center flex items-center justify-center"
-            >
-              <span className="block text-white text-[1rem] inner-text">
+            <div>
+              <div
+                key={item.name}
+                className="item_card blob text-center mx-auto flex items-center justify-center"
+              >
+                <span className="block text-white text-[1.2rem] inner-text">
+                  {item.icon}
+                </span>
+              </div>
+              <span className="block text poppins-regular text-[.7rem] mt-5 text-center">
                 {item.action}
               </span>
             </div>
