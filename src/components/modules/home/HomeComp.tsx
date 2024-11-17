@@ -186,7 +186,7 @@ const HomeComp = () => {
           {userStory.map((item, index) => (
             <div
               key={item.name}
-              className="md:w-full w-[40%] flex md:flex-col gap-[2rem] flex-row-reverse "
+              className="md:w-full w-[45%] flex md:flex-col gap-[1rem] flex-row-reverse "
             >
               <div className="flex-container md:flex-row flex-col flex items-center justify-start">
                 <div className="item_card blob text-center flex items-center justify-center">
@@ -200,7 +200,7 @@ const HomeComp = () => {
                   }`}
                 ></div>
               </div>
-              <span className="text self-start mt-[3rem] poppins-regular text-[.7rem] md:mt-5">
+              <span className="block self-start mt-[3rem] poppins-regular text-[.7rem] md:mt-5 text-left w-full">
                 {item.action}
               </span>
             </div>
