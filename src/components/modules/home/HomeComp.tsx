@@ -179,12 +179,15 @@ const HomeComp = () => {
       </section>
 
       <section className="howitworks pb-[2rem]">
-        <h1 className="text-center font-semibold mb-8 text-[1rem] poppins-regular">
+        <h1 className="text-center font-semibold mb-8 text-[1rem] poppins-bold">
           How it works
         </h1>
-        <div className="flow_blob px-[3rem] flex md:flex-row flex-col items-center">
+        <div className="flow_blob px-[3rem] flex md:flex-row flex-col items-center justify-center">
           {userStory.map((item, index) => (
-            <div key={item.name} className="w-full">
+            <div
+              key={item.name}
+              className="md:w-full w-[40%] flex md:flex-col gap-[2rem] flex-row-reverse "
+            >
               <div className="flex-container md:flex-row flex-col flex items-center justify-start">
                 <div className="item_card blob text-center flex items-center justify-center">
                   <span className="inner-text block text-white text-[1.6rem]">
@@ -192,12 +195,12 @@ const HomeComp = () => {
                   </span>
                 </div>
                 <div
-                  className={`item_container md:w-[75%] w-[.025rem] h-[5rem] md:h-[.1rem] bg-[#0358bd] ${
+                  className={`item_container md:w-[75%] w-[.1rem] h-[5rem] md:h-[.1rem] bg-[#0358bd] ${
                     index === userStory.length - 1 ? "hidden" : "block"
                   }`}
                 ></div>
               </div>
-              <span className="md:block hidden text poppins-regular text-[.7rem] md:mt-5 mt-3">
+              <span className="text self-start mt-[3rem] poppins-regular text-[.7rem] md:mt-5">
                 {item.action}
               </span>
             </div>
