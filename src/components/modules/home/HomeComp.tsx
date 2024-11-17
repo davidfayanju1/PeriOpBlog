@@ -2,7 +2,6 @@ import { generateYearOptions } from "../../../lib/Date";
 import Button from "../../common/Button";
 import Input from "../../common/Input";
 import { useState } from "react";
-import { PiSignIn } from "react-icons/pi";
 import { GiBookshelf } from "react-icons/gi";
 import { BsCartPlus } from "react-icons/bs";
 import { RiSecurePaymentLine } from "react-icons/ri";
