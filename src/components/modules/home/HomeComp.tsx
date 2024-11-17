@@ -61,7 +61,7 @@ const HomeComp = () => {
 
     {
       name: "Fifth",
-      action: "Download your Digital Asset",
+      action: "Download",
       icon: <FaDownload />,
     },
   ];
@@ -81,7 +81,7 @@ const HomeComp = () => {
               Elevate Your Practice with Every Click.
             </span>
 
-            <div className="item_container pr-3">
+            <div className="item_container px-3">
               <div className="input_container flex items-center px-7 justify-center border-solid mt-9 border-[1px] border-gray-400 rounded-full md:w-[65%] w-full md:h-[3rem] h-[2.5rem]">
                 <input
                   type="text"
@@ -182,11 +182,11 @@ const HomeComp = () => {
         <h1 className="text-center font-semibold mb-8 text-[1rem] poppins-bold">
           How it works
         </h1>
-        <div className="flow_blob md:px-[3rem] px-0 flex md:flex-row flex-col items-center justify-center">
+        <div className="flow_blob md:px-[3rem] px-0 flex md:flex-row flex-col items-center justify-center mx-auto">
           {userStory.map((item, index) => (
             <div
               key={item.name}
-              className="md:w-full md:min-w-0 w-[55%] min-w-[12rem]  flex md:flex-col flex-row-reverse"
+              className="md:w-full md:min-w-0 w-[55%] min-w-[11rem]  flex md:flex-col flex-row-reverse"
             >
               <div className="flex-container md:flex-row flex-col flex items-center justify-start">
                 <div className="item_card blob text-center flex items-center justify-center">
@@ -195,12 +195,12 @@ const HomeComp = () => {
                   </span>
                 </div>
                 <div
-                  className={`item_container md:w-[75%] w-[.1rem] h-[5rem] md:h-[.1rem] bg-[#0358bd] ${
+                  className={`item_container md:w-[75%] w-[.1rem] h-[4rem] md:h-[.1rem] bg-[#0358bd] ${
                     index === userStory.length - 1 ? "hidden" : "block"
                   }`}
                 ></div>
               </div>
-              <span className="block self-start mt-[2.5rem] poppins-regular text-[.7rem] md:mt-5 text-left w-full">
+              <span className="block self-start mt-[2rem] poppins-regular text-[.7rem] md:mt-5 text-left w-full">
                 {item.action}
               </span>
             </div>
