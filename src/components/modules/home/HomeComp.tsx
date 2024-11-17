@@ -7,6 +7,8 @@ import { GiBookshelf } from "react-icons/gi";
 import { BsCartPlus } from "react-icons/bs";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { FaDownload } from "react-icons/fa6";
+import { FaSignInAlt } from "react-icons/fa";
+
 interface SearchState {
   title: string;
   author: string;
@@ -37,7 +39,7 @@ const HomeComp = () => {
     {
       name: "First",
       action: "Sign Up/ Login",
-      icon: <PiSignIn />,
+      icon: <FaSignInAlt />,
     },
 
     {
@@ -181,18 +183,22 @@ const HomeComp = () => {
         <h1 className="text-center font-semibold mb-8 text-[1rem] poppins-regular">
           How it works
         </h1>
-        <div className="flow_blob flex md:flex-row flex-col items-center justify-around gap-[2rem]">
-          {userStory.map((item) => (
-            <div>
-              <div
-                key={item.name}
-                className="item_card blob text-center mx-auto flex items-center justify-center"
-              >
-                <span className="block text-white text-[1.34rem] inner-text">
-                  {item.icon}
-                </span>
+        <div className="flow_blob px-[3rem] flex md:flex-row flex-col items-center">
+          {userStory.map((item, index) => (
+            <div key={item.name} className="w-full">
+              <div className="flex-container md:flex-row flex-col flex items-center justify-start">
+                <div className="item_card blob text-center flex items-center justify-center">
+                  <span className="inner-text block text-white text-[1.6rem]">
+                    {item.icon}
+                  </span>
+                </div>
+                <div
+                  className={`item_container md:w-[75%] w-[.025rem] h-[5rem] md:h-[.1rem] bg-[#0358bd] ${
+                    index === userStory.length - 1 ? "hidden" : "block"
+                  }`}
+                ></div>
               </div>
-              <span className="block text poppins-regular text-[.7rem] md:mt-5 mt-3 text-center">
+              <span className="md:block hidden text poppins-regular text-[.7rem] md:mt-5 mt-3">
                 {item.action}
               </span>
             </div>

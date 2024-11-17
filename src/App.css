@@ -117,9 +117,9 @@
 }
 
 .blob {
-  background-color: #3b82f6;
-  width: 85px;
-  height: 85px;
+  background-color: #0358bd;
+  width: 95px;
+  height: 95px;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   transform: rotate(45deg);
   position: relative;
@@ -127,8 +127,8 @@
 
 @media screen and (max-width: 768px) {
   .blob {
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 120px;
   }
 }
 .inner-text {
