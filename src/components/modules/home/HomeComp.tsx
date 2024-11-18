@@ -7,6 +7,8 @@ import { BsCartPlus } from "react-icons/bs";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { FaDownload } from "react-icons/fa6";
 import { FaSignInAlt } from "react-icons/fa";
+import Reviews from "./Reviews";
+import Title from "../../UI/Title";
 
 interface SearchState {
   title: string;
@@ -81,7 +83,7 @@ const HomeComp = () => {
               Elevate Your Practice with Every Click.
             </span>
 
-            <div className="item_container px-3">
+            <div className="item_container p-3">
               <div className="input_container flex items-center px-7 justify-center border-solid mt-9 border-[1px] border-gray-400 rounded-full md:w-[65%] w-full md:h-[3rem] h-[2.5rem]">
                 <input
                   type="text"
@@ -178,15 +180,14 @@ const HomeComp = () => {
         </div>
       </section>
 
-      <section className="howitworks pb-[2rem]">
-        <h1 className="text-center font-semibold mb-8 text-[1rem] poppins-bold">
-          How it works
-        </h1>
-        <div className="flow_blob md:px-[3rem] px-0 flex md:flex-row flex-col items-center justify-center mx-auto">
+      <section className="howitworks py-[5rem]">
+        <Title textStyle="text-center mb-[3rem]">How it works</Title>
+
+        <div className="flow_blob md:px-[3rem] px-0 flex md:flex-row flex-col items-center justify-center w-full">
           {userStory.map((item, index) => (
             <div
               key={item.name}
-              className="md:w-full md:min-w-0 w-[55%] min-w-[11rem]  flex md:flex-col flex-row-reverse"
+              className="md:w-full md:min-w-0 w-[55%] min-w-[11rem] flex md:flex-col flex-row-reverse"
             >
               <div className="flex-container md:flex-row flex-col flex items-center justify-start">
                 <div className="item_card blob text-center flex items-center justify-center">
@@ -194,11 +195,9 @@ const HomeComp = () => {
                     {item.icon}
                   </span>
                 </div>
-                <div
-                  className={`item_container md:w-[75%] w-[.1rem] h-[4rem] md:h-[.1rem] bg-[#0358bd] ${
-                    index === userStory.length - 1 ? "hidden" : "block"
-                  }`}
-                ></div>
+                {index !== userStory.length - 1 && (
+                  <div className="item_container md:w-[75%] w-[.1rem] h-[4rem] md:h-[.1rem] bg-[#0358bd] ml-0 md:ml-0 mt-0 md:mt-0"></div>
+                )}
               </div>
               <span className="block self-start mt-[2rem] poppins-regular text-[.7rem] md:mt-5 text-left w-full">
                 {item.action}
@@ -206,6 +205,15 @@ const HomeComp = () => {
             </div>
           ))}
         </div>
+      </section>
+
+      <section className="reviews my-[4rem]">
+        <Reviews />
+      </section>
+
+      <section className="testimonials min-h-[20rem] md:p-[3rem] px-[1rem]">
+        <Title textStyle="text-center mb-[1.4rem]">Testimonials</Title>
+        <div className="item_container w-full bg-gray-100 min-h-[15rem]"></div>
       </section>
     </div>
   );
