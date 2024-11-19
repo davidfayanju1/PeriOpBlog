@@ -6,11 +6,11 @@ interface DefaultLayoutProp {
   children: React.ReactNode;
 }
 
-const DefaultLayout: React.FC<DefaultLayoutProp> = ({ children }) => {
+const DefaultLayout = ({ children }: DefaultLayoutProp) => {
   return (
     <div>
       <Nav />
-      <div className="children_component mt-[6rem]">{children}</div>
+      <div className="mt-[6rem]">{children}</div>
       <Footer />
     </div>
   );

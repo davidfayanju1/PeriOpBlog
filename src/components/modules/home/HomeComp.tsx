@@ -9,6 +9,7 @@ import { FaDownload } from "react-icons/fa6";
 import { FaSignInAlt } from "react-icons/fa";
 import Reviews from "./Reviews";
 import Title from "../../UI/Title";
+import Testimonials from "./Testimonials";
 
 interface SearchState {
   title: string;
@@ -149,7 +150,7 @@ const HomeComp = () => {
         </section>
       </div>
 
-      <section className="section_container min-h-[10rem] w-full md:px-[2.5rem] px-[.5rem] flex items-center justify-start md:gap-4 gap-2">
+      <section className="section_container min-h-[10rem] w-full md:px-[2.5rem] px-[.5rem] flex items-center justify-start md:gap-4 gap-2 mx-auto">
         <div className="item_container flex items-center justify-center md:gap-5 gap-2 md:w-[70%] w-[89%]">
           <Input
             placeholder="Enter Author Name"
@@ -180,10 +181,10 @@ const HomeComp = () => {
         </div>
       </section>
 
-      <section className="howitworks py-[5rem]">
+      <section className="howitworks py-[3rem]">
         <Title textStyle="text-center mb-[3rem]">How it works</Title>
 
-        <div className="flow_blob md:px-[3rem] px-0 flex md:flex-row flex-col items-center justify-center w-full">
+        <div className="flow_blob md:px-[3rem] px-0 flex md:flex-row flex-col items-center justify-center md:w-full mx-auto w-[50%] ">
           {userStory.map((item, index) => (
             <div
               key={item.name}
@@ -212,8 +213,7 @@ const HomeComp = () => {
       </section>
 
       <section className="testimonials min-h-[20rem] md:p-[3rem] px-[1rem]">
-        <Title textStyle="text-center mb-[1.4rem]">Testimonials</Title>
-        <div className="item_container w-full bg-gray-100 min-h-[15rem]"></div>
+        <Testimonials />
       </section>
     </div>
   );
