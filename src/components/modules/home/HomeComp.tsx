@@ -85,10 +85,10 @@ const HomeComp = () => {
             </span>
 
             <div className="item_container p-3">
-              <div className="input_container flex items-center px-7 justify-center border-solid mt-9  rounded-full md:w-[65%] shadow-lg shadow-gray-100 w-full md:h-[3rem] h-[2.5rem]">
+              <div className="input_container flex items-center px-7 justify-center mt-9 rounded-full md:w-[65%] border-solid border-[1px] border-gray-200 w-full md:h-[3rem] h-[2.5rem]">
                 <input
                   type="text"
-                  className="outline-none poppins-regular bg-transparent w-full text-[16px]"
+                  className="outline-none poppins-regular bg-transparent w-full text-[16px] placeholder:text-gray-200 placeholder:text-[13px]"
                   placeholder="Enter Book Title"
                   value={search.title}
                 />
