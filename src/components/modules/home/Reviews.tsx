@@ -16,7 +16,7 @@ const Reviews = () => {
       </figure>
 
       <div className="form_container my-auto h-full md:w-[50%] w-full md:px-10 px-5 md:py-0 py-[2.5rem]">
-        <Title textStyle="mb-2">Reviews</Title>
+        <Title textStyle="mb-2 text-blue-900">Reviews</Title>
         <span className="block poppins-regular font-semibold md:text-[1rem] text-[.9rem]">
           Send in your reviews
         </span>

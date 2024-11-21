@@ -20,7 +20,9 @@ const Testimonials = () => {
 
   return (
     <div className="page_container">
-      <Title textStyle="text-center mb-[1.7rem]">Testimonials</Title>
+      <Title textStyle="text-center mb-[1.7rem] text-blue-900">
+        Testimonials
+      </Title>
       <Marquee className="item_container flex items-center justify-center">
         {testimonials.map((item) => (
           <div className="testimonial_card my-auto bg-white rounded-[9px] min-h-[15rem] p-3 w-[20rem] mr-5">
