@@ -40,14 +40,16 @@ const AboutUs = () => {
 
   return (
     <>
-      <div className="flex items-center md:py-0 py-7 bg-white min-h-[15rem] w-full md:px-[3rem] mx-auto justify-around md:flex-row flex-col md:gap-0 gap-6">
+      <div className="flex items-center md:py-0 py-7 bg-white min-h-[15rem] w-full md:px-[3rem] mx-auto justify-around md:flex-row flex-col md:gap-0 gap-9">
         {ourInfo.map((item) => (
           <div
             key={item.name}
             className="item_card flex flex-col items-center justify-center"
           >
-            <div className="icon_container mx-auto">{item.icon}</div>
-            <span className="block poppins-semibold text-[2.6rem] text-blue-900 text-center">
+            <div className="icon_container mx-auto md:mb-1 mb-0">
+              {item.icon}
+            </div>
+            <span className="block mb-[-.6rem] poppins-semibold text-[2.6rem] text-blue-900 text-center">
               {item.number}
             </span>
             <span className="block poppins-regular font-semibold text-gray-400 text-[.9rem]">

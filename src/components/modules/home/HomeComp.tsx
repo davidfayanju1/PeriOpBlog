@@ -3,7 +3,6 @@ import Button from "../../common/Button";
 import Input from "../../common/Input";
 import { useState } from "react";
 import { GiBookshelf } from "react-icons/gi";
-import { RiSecurePaymentLine } from "react-icons/ri";
 import { FaDownload } from "react-icons/fa6";
 import { FaSignInAlt } from "react-icons/fa";
 import Reviews from "./Reviews";
@@ -11,6 +10,8 @@ import Title from "../../UI/Title";
 import Testimonials from "./Testimonials";
 import AboutUs from "./AboutUs";
 import { FaCartPlus } from "react-icons/fa";
+import Blogs from "./Blogs";
+import { RiSecurePaymentFill } from "react-icons/ri";
 
 interface SearchState {
   title: string;
@@ -60,7 +61,7 @@ const HomeComp = () => {
     {
       name: "Fourth",
       action: "Pay the bill",
-      icon: <RiSecurePaymentLine />,
+      icon: <RiSecurePaymentFill />,
     },
 
     {
@@ -211,6 +212,9 @@ const HomeComp = () => {
             </div>
           ))}
         </div>
+      </section>
+      <section className="blogs">
+        <Blogs />
       </section>
 
       <section className="reviews my-[4rem]">
