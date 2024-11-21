@@ -25,10 +25,10 @@ const Testimonials = () => {
         {testimonials.map((item) => (
           <div className="testimonial_card my-auto bg-white rounded-[9px] min-h-[15rem] p-3 w-[20rem] mr-5">
             <img src="/icons/quote.svg" alt="" className="mx-auto" />
-            <blockquote className="poppins-regular text-center text-[.8rem] custom-multiline-ellipsis">
+            <blockquote className="poppins-regular mb-5 text-center text-[.8rem] custom-multiline-ellipsis">
               {item?.text}
             </blockquote>
-            <span className="author text-center block mt-2 poppins-semibold">
+            <span className="author text-center block mt-2 poppins-semibold text-[.9rem]">
               - {item?.name}
             </span>
           </div>

@@ -7,7 +7,7 @@ const Reviews = () => {
     <div className="flex items-center justify-center md:flex-row flex-col min-h-[25rem]">
       <figure className="image_container h-full md:w-[50%] w-full">
         <img
-          src="/images/nursesF.jpg"
+          src="/images/questions.jpg"
           alt="nurse-picture"
           className="w-full md:h-[30rem] h-[18rem] object-cover inset-0"
           loading="lazy"

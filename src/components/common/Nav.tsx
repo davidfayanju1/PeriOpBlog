@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaUserAlt } from "react-icons/fa";
+import ReactTooltip from "react-tooltip";
 
 const Nav = () => {
   const links = [
@@ -22,6 +24,7 @@ const Nav = () => {
   ];
 
   const [toggle, setToggle] = useState(false);
+  const [toggleModal, setToggleModal] = useState(false);
 
   return (
     <div>
@@ -57,8 +60,11 @@ const Nav = () => {
         )}
 
         <div className="icon_container flex items-center justify-center gap-5 h-full">
-          <button className="text-[1.1rem] text-black">
-            <i className="fa-solid fa-magnifying-glass"></i>
+          <button
+            onClick={() => setToggleModal(!toggleModal)}
+            className="text-[1.1rem] text-black"
+          >
+            <FaUserAlt />
           </button>
           <button className="text-[1.1rem] text-black md:block hidden">
             <i className="fa-solid fa-cart-shopping"></i>

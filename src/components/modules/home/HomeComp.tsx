@@ -85,11 +85,11 @@ const HomeComp = () => {
             </span>
 
             <div className="item_container p-3">
-              <div className="input_container flex items-center px-7 justify-center border-solid mt-9 border-[1px] border-gray-400 rounded-full md:w-[65%] w-full md:h-[3rem] h-[2.5rem]">
+              <div className="input_container flex items-center px-7 justify-center border-solid mt-9  rounded-full md:w-[65%] shadow-lg shadow-gray-100 w-full md:h-[3rem] h-[2.5rem]">
                 <input
                   type="text"
-                  className="outline-none poppins-regular placeholder:text-[14px] bg-transparent w-full text-[16px]"
-                  placeholder="Write Title Here"
+                  className="outline-none poppins-regular bg-transparent w-full text-[16px]"
+                  placeholder="Enter Book Title"
                   value={search.title}
                 />
 
@@ -183,12 +183,11 @@ const HomeComp = () => {
 
       <section className="howitworks py-[3rem]">
         <Title textStyle="text-center mb-[3rem]">How it works</Title>
-
-        <div className="flow_blob md:px-[3rem] px-0 flex md:flex-row flex-col items-center justify-center md:w-full mx-auto w-[50%] ">
+        <div className="flow_blob flex items-center md:pl-[5rem] justify-center md:flex-row flex-col w-full">
           {userStory.map((item, index) => (
             <div
               key={item.name}
-              className="md:w-full md:min-w-0 w-[55%] min-w-[11rem] flex md:flex-col flex-row-reverse"
+              className="md:w-full !mx-auto md:max-w-full w-full max-w-[13rem] flex md:flex-col flex-row-reverse"
             >
               <div className="flex-container md:flex-row flex-col flex items-center justify-start">
                 <div className="item_card blob text-center flex items-center justify-center">
@@ -197,7 +196,7 @@ const HomeComp = () => {
                   </span>
                 </div>
                 {index !== userStory.length - 1 && (
-                  <div className="item_container md:w-[75%] w-[.1rem] h-[4rem] md:h-[.1rem] bg-[#0358bd] ml-0 md:ml-0 mt-0 md:mt-0"></div>
+                  <div className="item_container md:w-[71%] w-[.1rem] h-[4rem] md:h-[.1rem] bg-[#0358bd] ml-0 md:ml-0 mt-0 md:mt-0"></div>
                 )}
               </div>
               <span className="block self-start mt-[2rem] poppins-regular text-[.7rem] md:mt-5 text-left w-full">
