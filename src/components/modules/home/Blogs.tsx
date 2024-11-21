@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import Title from "../../UI/Title";
-import { PiGitlabLogoSimpleFill } from "react-icons/pi";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import Button from "../../common/Button";
+import { FaCameraRetro } from "react-icons/fa";
 
 const Blogs = () => {
   const blogPosts = [
@@ -21,7 +21,6 @@ const Blogs = () => {
     },
 
     {
-      img: "/images/stetoscope.jpg",
       title: "My job my Forte",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis doloremque soluta sunt saepe natus enim amet alias neque suscipit aperiam?",
       createdAt: "2 days ago",
@@ -46,13 +45,17 @@ const Blogs = () => {
           {blogPosts.map((item) => (
             <div
               key={item.title}
-              className="card min-h-[20rem] rounded-[9px] overflow-hidden max-w-[40%] w-full"
+              className="card min-h-[20rem] rounded-[9px] overflow-hidden md:max-w-[40%] max-w-full w-full"
             >
               {item.img ? (
-                <img src={item.img} alt="" />
+                <img
+                  src={item.img}
+                  alt=""
+                  className="h-[11rem] object-cover w-full"
+                />
               ) : (
                 <div className="item_container bg-gray-300 w-full h-[11rem] flex items-center justify-center">
-                  <PiGitlabLogoSimpleFill color="#FFFFFF" size={80} />
+                  <FaCameraRetro color="#FFFFFF" size={30} />
                 </div>
               )}
 
