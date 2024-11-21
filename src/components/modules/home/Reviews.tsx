@@ -5,7 +5,8 @@ import Title from "../../UI/Title";
 const Reviews = () => {
   return (
     <div className="flex items-center justify-center md:flex-row flex-col min-h-[25rem]">
-      <figure className="image_container h-full md:w-[50%] w-full">
+      <figure className="image_container relative h-full md:w-[50%] w-full">
+        <div className="item_container h-full w-full bg-blue-800/5 absolute top-0 left-0 right-0 bottom-0"></div>
         <img
           src="/images/questions.jpg"
           alt="nurse-picture"
@@ -14,7 +15,7 @@ const Reviews = () => {
         />
       </figure>
 
-      <div className="form_container my-auto h-full md:w-[50%] w-full px-5 md:py-0 py-[2.5rem]">
+      <div className="form_container my-auto h-full md:w-[50%] w-full md:px-10 px-5 md:py-0 py-[2.5rem]">
         <Title textStyle="mb-2">Reviews</Title>
         <span className="block poppins-regular font-semibold md:text-[1rem] text-[.9rem]">
           Send in your reviews

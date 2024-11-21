@@ -185,9 +185,9 @@ const HomeComp = () => {
         </div>
       </section>
 
-      <section className="howitworks py-[3rem]">
+      <section className="howitworks py-[3rem] bg-blue-50">
         <Title textStyle="text-center mb-[3rem]">How it works</Title>
-        <div className="flow_blob flex items-center md:pl-[5rem] justify-center md:flex-row flex-col w-full">
+        <div className="flow_blob flex items-center md:pl-[12rem] justify-center md:flex-row flex-col w-full">
           {userStory.map((item, index) => (
             <div
               key={item.name}
