@@ -10,6 +10,7 @@ import { FaSignInAlt } from "react-icons/fa";
 import Reviews from "./Reviews";
 import Title from "../../UI/Title";
 import Testimonials from "./Testimonials";
+import AboutUs from "./AboutUs";
 
 interface SearchState {
   title: string;
@@ -179,6 +180,10 @@ const HomeComp = () => {
             onPress={() => console.log("Ok")}
           />
         </div>
+      </section>
+
+      <section className="about-us">
+        <AboutUs />
       </section>
 
       <section className="howitworks py-[3rem]">
