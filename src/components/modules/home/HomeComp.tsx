@@ -3,7 +3,6 @@ import Button from "../../common/Button";
 import Input from "../../common/Input";
 import { useState } from "react";
 import { GiBookshelf } from "react-icons/gi";
-import { BsCartPlus } from "react-icons/bs";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { FaDownload } from "react-icons/fa6";
 import { FaSignInAlt } from "react-icons/fa";
@@ -201,7 +200,7 @@ const HomeComp = () => {
                   </span>
                 </div>
                 {index !== userStory.length - 1 && (
-                  <div className="item_container md:w-[71%] w-[.1rem] h-[4rem] md:h-[.1rem] bg-[#0358bd] ml-0 md:ml-0 mt-0 md:mt-0"></div>
+                  <div className="item_container md:w-[75%] w-[.1rem] h-[4rem] md:h-[.1rem] bg-[#0358bd] ml-0 md:ml-0 mt-0 md:mt-0"></div>
                 )}
               </div>
               <span className="block self-start mt-[2rem] poppins-regular text-[.7rem] md:mt-5 text-left w-full">

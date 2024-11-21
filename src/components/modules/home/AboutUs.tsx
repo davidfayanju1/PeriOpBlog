@@ -1,6 +1,5 @@
 import { IoBookSharp } from "react-icons/io5";
 import { ImBooks } from "react-icons/im";
-import { PiUserFocus } from "react-icons/pi";
 import { FaMoneyBillTrendUp } from "react-icons/fa6";
 import { FaUserTie } from "react-icons/fa";
 import { PiUserFocusFill } from "react-icons/pi";
