@@ -3,7 +3,7 @@ import DefaultLayout from "../layout/DefaultLayout";
 
 const Events = () => {
   return (
-    <DefaultLayout>
+    <DefaultLayout active={4}>
       <EventsComp />
     </DefaultLayout>
   );

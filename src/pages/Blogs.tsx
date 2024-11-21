@@ -1,9 +1,10 @@
+import BlogsComp from "../components/modules/blogs/BlogsComp";
 import DefaultLayout from "../layout/DefaultLayout";
 
 const Blogs = () => {
   return (
-    <DefaultLayout>
-      <div className="title">Blogs</div>
+    <DefaultLayout active={3}>
+      <BlogsComp />
     </DefaultLayout>
   );
 };

@@ -1,9 +1,10 @@
+import BookShopComp from "../components/modules/bookShop/BookShopComp";
 import DefaultLayout from "../layout/DefaultLayout";
 
 const BookShop = () => {
   return (
-    <DefaultLayout>
-      <div className="title">Book Store</div>
+    <DefaultLayout active={1}>
+      <BookShopComp />
     </DefaultLayout>
   );
 };

@@ -1,30 +1,50 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
-import ReactTooltip from "react-tooltip";
 
-const Nav = () => {
+interface NavProps {
+  active: number;
+}
+
+interface LinkItems {
+  name: string;
+  route: string;
+  activeI: number;
+}
+
+const Nav = ({ active }: NavProps) => {
   const links = [
     {
       name: "Book-Shop",
       route: "/books",
+      activeI: 1,
     },
     {
       name: "Articles",
       route: "/articles",
+      activeI: 2,
     },
     {
       name: "Blogs",
       route: "/blogs",
+      activeI: 3,
     },
     {
       name: "Events",
       route: "/events",
+      activeI: 4,
     },
   ];
 
   const [toggle, setToggle] = useState(false);
   const [toggleModal, setToggleModal] = useState(false);
+  const [activepage, setActivePage] = useState(1);
+  const navigate = useNavigate();
+
+  const route = (item: LinkItems) => {
+    navigate(item.route);
+    setActivePage(item.activeI);
+  };
 
   return (
     <div>
@@ -40,20 +60,38 @@ const Nav = () => {
         <ul className="md:block hidden">
           <li className=" flex items-center justify-center gap-[18.5px]">
             {links.map((item) => (
-              <Link to={item.route} className="poppins-regular text-[1rem]">
+              <button
+                onClick={() => route(item)}
+                className={`poppins-regular outline-none border-none ${
+                  activepage && ""
+                } text-[1rem] ${
+                  active === item?.activeI
+                    ? "text-[#0358BD] underline"
+                    : "text-black"
+                }`}
+              >
                 {item.name}
-              </Link>
+              </button>
             ))}
           </li>
         </ul>
 
         {toggle && (
-          <ul className="block md:hidden bg-white absolute top-[6rem] left-0 w-full p-5 min-h-[15rem]">
+          <ul className="mobile_nav block md:hidden bg-white absolute top-[6rem] left-0 w-full p-5 min-h-[15rem]">
             <li className=" flex flex-col items-center justify-center gap-4">
               {links.map((item) => (
-                <Link to={item.route} className="poppins-regular text-[1rem]">
+                <button
+                  onClick={() => route(item)}
+                  className={`poppins-regular outline-none border-none ${
+                    activepage && ""
+                  } text-[1rem] ${
+                    active === item?.activeI
+                      ? "text-[#0358BD] underline"
+                      : "text-black"
+                  }`}
+                >
                   {item.name}
-                </Link>
+                </button>
               ))}
             </li>
           </ul>

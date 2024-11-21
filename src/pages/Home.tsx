@@ -3,7 +3,7 @@ import HomeComp from "../components/modules/home/HomeComp";
 
 const Home = () => {
   return (
-    <DefaultLayout>
+    <DefaultLayout active={5}>
       <HomeComp />
     </DefaultLayout>
   );

@@ -1,9 +1,10 @@
+import ArticlesComp from "../components/modules/articles/ArticlesComp";
 import DefaultLayout from "../layout/DefaultLayout";
 
 const Articles = () => {
   return (
-    <DefaultLayout>
-      <div className="title">Articles</div>
+    <DefaultLayout active={2}>
+      <ArticlesComp />
     </DefaultLayout>
   );
 };
