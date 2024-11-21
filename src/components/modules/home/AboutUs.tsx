@@ -3,6 +3,7 @@ import { ImBooks } from "react-icons/im";
 import { PiUserFocus } from "react-icons/pi";
 import { FaMoneyBillTrendUp } from "react-icons/fa6";
 import { FaUserTie } from "react-icons/fa";
+import { PiUserFocusFill } from "react-icons/pi";
 
 const AboutUs = () => {
   const sizes = 50;
@@ -23,7 +24,7 @@ const AboutUs = () => {
     {
       name: "Members",
       number: 20,
-      icon: <PiUserFocus size={sizes} color={colors} />,
+      icon: <PiUserFocusFill size={sizes} color={colors} />,
     },
 
     {
@@ -47,10 +48,10 @@ const AboutUs = () => {
             className="item_card flex flex-col items-center justify-center"
           >
             <div className="icon_container mx-auto">{item.icon}</div>
-            <span className="block poppins-semibold text-[1.7rem] text-blue-900 text-center">
+            <span className="block poppins-semibold text-[2.6rem] text-blue-900 text-center">
               {item.number}
             </span>
-            <span className="block poppins-regular text-gray-400 text-[.9rem]">
+            <span className="block poppins-regular font-semibold text-gray-400 text-[.9rem]">
               {item.name}
             </span>
           </div>

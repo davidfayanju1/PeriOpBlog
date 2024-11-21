@@ -11,6 +11,7 @@ import Reviews from "./Reviews";
 import Title from "../../UI/Title";
 import Testimonials from "./Testimonials";
 import AboutUs from "./AboutUs";
+import { FaCartPlus } from "react-icons/fa";
 
 interface SearchState {
   title: string;
@@ -54,7 +55,7 @@ const HomeComp = () => {
     {
       name: "Third",
       action: "Add to Cart",
-      icon: <BsCartPlus />,
+      icon: <FaCartPlus />,
     },
 
     {
@@ -151,6 +152,9 @@ const HomeComp = () => {
         </section>
       </div>
 
+      <section className="about-us">
+        <AboutUs />
+      </section>
       <section className="section_container min-h-[10rem] w-full md:px-[2.5rem] px-[.5rem] flex items-center justify-start md:gap-4 gap-2 mx-auto">
         <div className="item_container flex items-center justify-center md:gap-5 gap-2 md:w-[70%] w-[89%]">
           <Input
@@ -180,10 +184,6 @@ const HomeComp = () => {
             onPress={() => console.log("Ok")}
           />
         </div>
-      </section>
-
-      <section className="about-us">
-        <AboutUs />
       </section>
 
       <section className="howitworks py-[3rem]">
