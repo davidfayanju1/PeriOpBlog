@@ -97,13 +97,23 @@ const Nav = ({ active }: NavProps) => {
           </ul>
         )}
 
-        <div className="icon_container flex items-center justify-center gap-5 h-full">
+        <div className="icon_container relative  flex items-center justify-center gap-5 h-full">
           <button
             onClick={() => setToggleModal(!toggleModal)}
             className="text-[1.1rem] text-black"
           >
             <FaUserAlt />
           </button>
+          {toggleModal && (
+            <div className="modal_container absolute top-[150%] p-3 bg-white rounded-[10px] h-[8rem] border-solid border-gray-500 w-[9rem]">
+              <div
+                onClick={() => navigate("/signup")}
+                className="bg-blue-800 text-white rounded-[9px] py-1 px-1 text-center"
+              >
+                Sign Up
+              </div>
+            </div>
+          )}
           <button className="text-[1.1rem] text-black md:block hidden">
             <i className="fa-solid fa-cart-shopping"></i>
           </button>
