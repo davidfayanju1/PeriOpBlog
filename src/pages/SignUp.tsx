@@ -18,7 +18,7 @@ const SignUp = () => {
 
           <div className="text_container absolute top-0 right-0 left-0 p-[3rem] bottom-0">
             <h1 className="poppins-bold text-[1.5rem] text-white">POB.</h1>
-            <div className="text_container mt-[5rem]">
+            <div className="text_container mt-[8rem]">
               <span className="text-white poppins-bold text-[2.5rem] block">
                 Select.
               </span>
