@@ -165,6 +165,7 @@ const HomeComp = () => {
             value={search.author}
             containerStyle="border-solid w-[55%] border-gray-300 border-[1px] rounded-full px-[.9rem] py-3"
             inputStyle="text-[16px]"
+            password
           />
           <Input
             type="select"
@@ -175,6 +176,7 @@ const HomeComp = () => {
             containerStyle="border-solid border-gray-300 border-[1px] rounded-full px-[.9rem] w-[45%] py-3"
             options={yearOptions}
             inputStyle="text-[16px] w-full"
+            password
           />
         </div>
         <div className="button_container md:w-[10%] w-[25%]">

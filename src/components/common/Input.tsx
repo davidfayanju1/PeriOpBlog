@@ -14,6 +14,7 @@ interface InputProps {
   inputStyle?: string;
   type: "text" | "select";
   options?: SelectOption[]; // Options for select input
+  password: boolean;
 }
 
 const Input = ({
@@ -24,6 +25,7 @@ const Input = ({
   containerStyle = "",
   inputStyle = "",
   type,
+  password = false,
   options = [],
   ...props
 }: InputProps) => {
@@ -34,34 +36,38 @@ const Input = ({
   };
 
   return (
-    <div className={containerStyle}>
+    <>
       {label && (
-        <label className="block mb-2 text-sm font-medium">{label}</label>
+        <label className="block mb-2 text-sm font-medium poppins-regular text-gray-500">
+          {label}
+        </label>
       )}
-      {type === "text" ? (
-        <input
-          type="text"
-          className={`outline-none placeholder:text-[14px] poppins-regular w-full bg-transparent border-none ${inputStyle}`}
-          placeholder={placeholder}
-          onChange={handleChange}
-          value={value}
-          {...props}
-        />
-      ) : (
-        <select
-          className={`outline-none poppins-regular w-full border-none bg-transparent ${inputStyle}`}
-          onChange={handleChange}
-          value={value}
-          {...props}
-        >
-          {options.map((option) => (
-            <option key={option.value} value={option.value}>
-              {option.label}
-            </option>
-          ))}
-        </select>
-      )}
-    </div>
+      <div className={containerStyle}>
+        {type === "text" ? (
+          <input
+            type={password ? "password" : "text"}
+            className={`outline-none placeholder:text-[14px] poppins-regular w-full bg-transparent border-none ${inputStyle}`}
+            placeholder={placeholder}
+            onChange={handleChange}
+            value={value}
+            {...props}
+          />
+        ) : (
+          <select
+            className={`outline-none poppins-regular w-full border-none bg-transparent ${inputStyle}`}
+            onChange={handleChange}
+            value={value}
+            {...props}
+          >
+            {options.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        )}
+      </div>
+    </>
   );
 };
 

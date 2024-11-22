@@ -33,6 +33,7 @@ const Reviews = () => {
             containerStyle="border-solid mb-5 border-gray-300 border-[1px] rounded-[9px] px-[.9rem] w-[45%] py-3 w-full"
             inputStyle=""
             handleChangeText={() => console.log("ok")}
+            password
           />
 
           <Input
@@ -43,6 +44,7 @@ const Reviews = () => {
             containerStyle="border-solid mb-9 border-gray-300 border-[1px] rounded-[9px] px-[.9rem] w-[45%] py-3 w-full"
             inputStyle=""
             handleChangeText={() => console.log("ok")}
+            password
           />
 
           <Button
