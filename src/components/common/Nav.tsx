@@ -105,7 +105,7 @@ const Nav = ({ active }: NavProps) => {
             <FaUserAlt />
           </button>
           {toggleModal && (
-            <div className="modal_container absolute top-[150%] p-3 bg-white rounded-[10px] h-[8rem] border-solid border-gray-500 w-[9rem]">
+            <div className="modal_container absolute top-[150%] p-3 bg-gray-100 rounded-[10px] h-[8rem] border-solid border-gray-200 border-[1px] w-[9rem]">
               <div
                 onClick={() => navigate("/signup")}
                 className="bg-blue-800 text-white rounded-[9px] py-1 px-1 text-center"

@@ -95,7 +95,7 @@ const SignUp = () => {
               buttonStyle="rounded-[9px] min-h-[3rem] w-full bg-blue-800 text-white poppins-semibold"
             />
 
-            <span className="block poppins-regular text-gray-500 text-center mt-8">
+            <span className="block poppins-regular text-gray-500 text-center mt-4">
               Already have an account?{" "}
               <Link to={"/login"} className="text-blue-800">
                 Login
