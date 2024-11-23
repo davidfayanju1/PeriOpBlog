@@ -99,6 +99,7 @@ const Nav = ({ active }: NavProps) => {
 
         <div className="icon_container relative  flex items-center justify-center gap-5 h-full">
           <button
+            title="Profile"
             onClick={() => setToggleModal(!toggleModal)}
             className="text-[1.1rem] text-black"
           >
@@ -114,7 +115,10 @@ const Nav = ({ active }: NavProps) => {
               </button>
             </div>
           )}
-          <button className="text-[1.1rem] text-black md:block hidden">
+          <button
+            title="Your Cart"
+            className="text-[1.1rem] text-black md:block hidden"
+          >
             <i className="fa-solid fa-cart-shopping"></i>
           </button>
 

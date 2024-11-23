@@ -122,15 +122,15 @@ const HomeComp = () => {
           </div>
         </section>
         <section className="h-full relative bg-[#F3F3F3] shadow-lg md:w-[25%] w-full rounded-[10px] overflow-hidden flex items-center justify-center">
-          <div className="item_container h-[50rem] w-[40rem] absolute z-0 top-[-20%] left-[-25%] right-0 flex items-center justify-center">
+          <div className="item_container absolute inset-0 flex items-center justify-center">
             <img
               loading="lazy"
               src="/icons/circles.svg"
               alt=""
-              className="w-full h-full"
+              className="h-full w-full object-cover"
             />
           </div>
-          <div className="book_container relative z-50000">
+          <div className="book_container relative z-10">
             <h1 className="poppins-semibold mb-3 text-[#0358BD] text-center text-[1.8rem]">
               NEW RELEASE
             </h1>
