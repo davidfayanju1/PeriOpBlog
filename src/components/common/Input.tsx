@@ -1,5 +1,5 @@
-import { ChangeEvent } from "react";
-import { BsEyeFill } from "react-icons/bs";
+import { ChangeEvent, useState } from "react";
+import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 
 interface SelectOption {
   value: string | number;
@@ -15,7 +15,7 @@ interface InputProps {
   inputStyle?: string;
   type: "text" | "select";
   options?: SelectOption[]; // Options for select input
-  password: boolean;
+  password?: boolean;
 }
 
 const Input = ({
@@ -30,6 +30,8 @@ const Input = ({
   options = [],
   ...props
 }: InputProps) => {
+  const [showPassword, setShowPassword] = useState(false);
+
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
@@ -47,7 +49,7 @@ const Input = ({
         {type === "text" ? (
           <div className="input_container flex items-center justify-between">
             <input
-              type={password ? "password" : "text"}
+              type={password && !showPassword ? "password" : "text"}
               className={`outline-none placeholder:text-[14px] poppins-regular w-full bg-transparent border-none ${inputStyle}`}
               placeholder={placeholder}
               onChange={handleChange}
@@ -55,11 +57,18 @@ const Input = ({
               {...props}
             />
 
-            {/* {password === true && (
-              <div className="password_container">
-                <BsEyeFill color="gray" />
+            {password && (
+              <div
+                className="password_container cursor-pointer"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? (
+                  <BsEyeSlashFill color="gray" />
+                ) : (
+                  <BsEyeFill color="gray" />
+                )}
               </div>
-            )} */}
+            )}
           </div>
         ) : (
           <select

@@ -18,16 +18,22 @@ const SignUp = () => {
     password: "",
   });
 
+  const handleInputChange = (field: string, value: string | number) => {
+    setForm((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
+  };
+
   const handleSignup = () => {
-    console.log("Sign Up");
+    console.log(form);
     navigate("/");
   };
 
   return (
-    <div className="page_container min-h-screen">
+    <div className="page_container md:min-h-screen">
       <div className="flex-Container p-4 flex items-center justify-center w-full h-full">
-        <div className="blue_side md:block relative hidden rounded-[10px] overflow-y-scroll h-screen w-[50%] bg-blue-800">
-          <img src="/icons/circle.svg" alt="" />
+        <div className="blue_side md:block relative hidden rounded-[10px] overflow-hidden h-screen w-[50%] bg-blue-800">
           <div className="overlay absolute top-0 left-0 bottom-0 right-0 bg-blue-900/30"></div>
           <img
             src="/images/nursesF.jpg"
@@ -51,7 +57,7 @@ const SignUp = () => {
                 We have the resources you need, all you have to do is signup...
               </span>
 
-              <div className="card_container bg-black w-full px-6 rounded-[10px] min-h-[15rem] mt-[10rem] mx-auto">
+              <div className="card_container bg-black w-full px-6 rounded-[10px] min-h-[15rem] pb-3 mt-[10rem] mx-auto">
                 <BiSolidQuoteLeft color="#515151" size={90} />
                 <div className="text_container mt-6">
                   <blockquote className="poppins-regular text-white text-[.9rem]">
@@ -68,7 +74,7 @@ const SignUp = () => {
             </div>
           </div>
         </div>
-        <div className="form-container md:w-[50%] w-full md:p-[3rem] !p-0">
+        <div className="form-container  md:w-[50%] w-full md:px-[3rem] px-0">
           <h1 className="poppins-bold text-blue-900 md:text-[3rem] text-[2.5rem]">
             Get Started
           </h1>
@@ -81,28 +87,28 @@ const SignUp = () => {
               placeholder="Enter Full Name"
               label="Full Name"
               type="text"
-              handleChangeText={(value) => console.log("author", value)}
-              value={""}
+              handleChangeText={(value) => handleInputChange("fullName", value)}
+              value={form.fullName}
               containerStyle="border-solid mb-8 w-full border-gray-300 border-[1px] rounded-[9px] px-[1rem] py-4"
               inputStyle="text-[16px] placeholder:text-gray-300"
-              password
+              password={false}
             />
             <Input
               placeholder="Enter Email Address"
               label="Email"
               type="text"
-              handleChangeText={(value) => console.log("author", value)}
-              value={""}
+              handleChangeText={(value) => handleInputChange("email", value)}
+              value={form.email}
               containerStyle="border-solid mb-8 w-full border-gray-300 border-[1px] rounded-[9px] px-[1rem] py-4"
               inputStyle="text-[16px] placeholder:text-gray-300"
-              password
+              password={false}
             />
             <Input
               placeholder="Enter Preferred Password"
               label="Password"
               type="text"
-              handleChangeText={(value) => console.log("author", value)}
-              value={""}
+              handleChangeText={(value) => handleInputChange("password", value)}
+              value={form.password}
               containerStyle="border-solid mb-12 w-full border-gray-300 border-[1px] rounded-[9px] px-[1rem] py-4"
               inputStyle="text-[16px] placeholder:text-gray-300"
               password={true}

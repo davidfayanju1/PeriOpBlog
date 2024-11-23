@@ -98,7 +98,7 @@ const HomeComp = () => {
                 <Button
                   title="Search"
                   onPress={() => console.log("ok")}
-                  buttonStyle="h-full  bg-[#0358BD] poppins-medium text-white font-semibold w-full mr-[-2rem] rounded-full"
+                  buttonStyle="h-full bg-[#0358BD] poppins-medium text-white font-semibold w-full mr-[-2rem] rounded-full"
                 />
               </div>
             </div>
