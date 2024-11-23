@@ -13,6 +13,9 @@
   font-style: normal;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
 .poppins-regular {
   font-family: "Poppins", sans-serif;
   font-weight: 400;

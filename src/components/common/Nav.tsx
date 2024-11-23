@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
 import { FaCircleUser } from "react-icons/fa6";
@@ -47,6 +47,14 @@ const Nav = ({ active }: NavProps) => {
     setActivePage(item.activeI);
   };
 
+  useEffect(() => {
+    if (toggle) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [toggle]);
+
   return (
     <div>
       <nav className="item_container z-30 fixed top-0 left-0 flex items-center justify-between w-full min-h-[6rem] bg-white md:px-[5.7rem] px-[1rem]">
@@ -58,7 +66,7 @@ const Nav = ({ active }: NavProps) => {
           </Link>
         </div>
 
-        <ul className="md:block hidden">
+        <ul className="desktop_links md:block hidden">
           <li className=" flex items-center justify-center gap-[18.5px]">
             {links.map((item) => (
               <button
@@ -78,14 +86,14 @@ const Nav = ({ active }: NavProps) => {
         </ul>
 
         {toggle && (
-          <ul className="mobile_nav block md:hidden bg-white absolute top-[6rem] left-0 w-full p-5 min-h-[15rem]">
-            <li className=" flex flex-col items-center justify-center gap-4">
+          <ul className="mobile_nav block md:hidden bg-white absolute top-[6rem] left-0 w-full p-5 h-screen">
+            <li className=" flex flex-col flex-1 items-start justify-center gap-4">
               {links.map((item) => (
                 <button
                   onClick={() => route(item)}
                   className={`poppins-regular outline-none border-none ${
                     activepage && ""
-                  } text-[1rem] ${
+                  } text-[2rem] ${
                     active === item?.activeI
                       ? "text-[#0358BD] underline"
                       : "text-black"
@@ -126,6 +134,7 @@ const Nav = ({ active }: NavProps) => {
             <i className="fa-solid fa-cart-shopping"></i>
           </button>
 
+          {/* Burger */}
           <button
             onClick={() => setToggle(!toggle)}
             className="text-black text-[1.1rem] md:hidden block"
