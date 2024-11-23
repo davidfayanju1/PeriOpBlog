@@ -10,7 +10,7 @@ const Button: React.FC<ButtonProps> = ({ title, onPress, buttonStyle }) => {
   return (
     <button
       onClick={onPress}
-      className={`flex items-center justify-center text-center ${buttonStyle}`}
+      className={`flex items-center button-hover-effect justify-center text-center ${buttonStyle}`}
     >
       {title}
     </button>

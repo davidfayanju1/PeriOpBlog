@@ -49,6 +49,7 @@ const Blogs = () => {
             >
               {item.img ? (
                 <img
+                  loading="lazy"
                   src={item.img}
                   alt=""
                   className="h-[11rem] object-cover w-full"

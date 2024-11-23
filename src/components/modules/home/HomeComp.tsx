@@ -98,7 +98,7 @@ const HomeComp = () => {
                 <Button
                   title="Search"
                   onPress={() => console.log("ok")}
-                  buttonStyle="h-full bg-[#0358BD] poppins-medium text-white font-semibold w-full mr-[-2rem] rounded-full"
+                  buttonStyle="h-full  bg-[#0358BD] poppins-medium text-white font-semibold w-full mr-[-2rem] rounded-full"
                 />
               </div>
             </div>
@@ -107,12 +107,14 @@ const HomeComp = () => {
           <div className="picture_container relative mx-auto md:w-[50%] w-[70%]">
             <div className="image_container md:max-h-[25rem] max-h-[22rem] md:h-[80%] h-full w-full rounded-full max-w-[25rem] md:min-w-[15rem] min-w-[15rem] overflow-hidden border-r-[18px] border-[#0358BD]">
               <img
+                loading="lazy"
                 src="/images/Opeyemi.jpg"
                 alt="hero-image"
                 className=" object-cover w-full h-full"
               />
             </div>
             <img
+              loading="lazy"
               src="/images/myImage.jpg"
               alt=""
               className="rounded-full absolute left-[-15%] bottom-[-3%] md:h-[12rem] h-[9rem] md:w-[12rem] w-[9rem] object-top"
@@ -121,7 +123,12 @@ const HomeComp = () => {
         </section>
         <section className="h-full relative bg-[#F3F3F3] shadow-lg md:w-[25%] w-full rounded-[10px] overflow-hidden flex items-center justify-center">
           <div className="item_container h-[50rem] w-[40rem] absolute z-0 top-[-20%] left-[-25%] right-0 flex items-center justify-center">
-            <img src="/icons/circles.svg" alt="" className="w-full h-full" />
+            <img
+              loading="lazy"
+              src="/icons/circles.svg"
+              alt=""
+              className="w-full h-full"
+            />
           </div>
           <div className="book_container relative z-50000">
             <h1 className="poppins-semibold mb-3 text-[#0358BD] text-center text-[1.8rem]">
@@ -129,6 +136,7 @@ const HomeComp = () => {
             </h1>
             <div className="book_container mb-4 h-[12rem] mx-auto">
               <img
+                loading="lazy"
                 src="/images/shift.jpg"
                 alt="book/article-cover"
                 className="h-full mx-auto shadow-md"

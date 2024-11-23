@@ -1,9 +1,28 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../components/common/Button";
 import Input from "../components/common/Input";
 import { BiSolidQuoteLeft } from "react-icons/bi";
+import { useState } from "react";
+
+interface FormState {
+  fullName: string;
+  email: string;
+  password: string;
+}
 
 const SignUp = () => {
+  const navigate = useNavigate();
+  const [form, setForm] = useState<FormState>({
+    fullName: "",
+    email: "",
+    password: "",
+  });
+
+  const handleSignup = () => {
+    console.log("Sign Up");
+    navigate("/");
+  };
+
   return (
     <div className="page_container min-h-screen">
       <div className="flex-Container p-4 flex items-center justify-center w-full h-full">
@@ -33,7 +52,7 @@ const SignUp = () => {
               </span>
 
               <div className="card_container bg-black w-full px-6 rounded-[10px] min-h-[15rem] mt-[10rem] mx-auto">
-                <BiSolidQuoteLeft color="#515151" size={90} className="" />
+                <BiSolidQuoteLeft color="#515151" size={90} />
                 <div className="text_container mt-6">
                   <blockquote className="poppins-regular text-white text-[.9rem]">
                     I'm impressed with the level of progress we've been able to
@@ -49,7 +68,7 @@ const SignUp = () => {
             </div>
           </div>
         </div>
-        <div className="form-container md:w-[50%] w-full md:p-[3rem] p-2">
+        <div className="form-container md:w-[50%] w-full md:p-[3rem] !p-0">
           <h1 className="poppins-bold text-blue-900 md:text-[3rem] text-[2.5rem]">
             Get Started
           </h1>
@@ -57,7 +76,7 @@ const SignUp = () => {
             Have an account with us and start enjoying the benefits
           </small>
 
-          <form>
+          <form className="">
             <Input
               placeholder="Enter Full Name"
               label="Full Name"
@@ -91,11 +110,11 @@ const SignUp = () => {
 
             <Button
               title="Sign Up"
-              onPress={() => console.log("")}
+              onPress={handleSignup}
               buttonStyle="rounded-[9px] min-h-[3rem] w-full bg-blue-800 text-white poppins-semibold"
             />
 
-            <span className="block poppins-regular text-gray-500 text-center mt-4">
+            <span className="block poppins-regular text-gray-500 text-center mt-4 text-[.9rem]">
               Already have an account?{" "}
               <Link to={"/login"} className="text-blue-800">
                 Login

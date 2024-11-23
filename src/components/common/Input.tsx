@@ -1,4 +1,5 @@
 import { ChangeEvent } from "react";
+import { BsEyeFill } from "react-icons/bs";
 
 interface SelectOption {
   value: string | number;
@@ -44,14 +45,22 @@ const Input = ({
       )}
       <div className={containerStyle}>
         {type === "text" ? (
-          <input
-            type={password ? "password" : "text"}
-            className={`outline-none placeholder:text-[14px] poppins-regular w-full bg-transparent border-none ${inputStyle}`}
-            placeholder={placeholder}
-            onChange={handleChange}
-            value={value}
-            {...props}
-          />
+          <div className="input_container flex items-center justify-between">
+            <input
+              type={password ? "password" : "text"}
+              className={`outline-none placeholder:text-[14px] poppins-regular w-full bg-transparent border-none ${inputStyle}`}
+              placeholder={placeholder}
+              onChange={handleChange}
+              value={value}
+              {...props}
+            />
+
+            {/* {password === true && (
+              <div className="password_container">
+                <BsEyeFill color="gray" />
+              </div>
+            )} */}
+          </div>
         ) : (
           <select
             className={`outline-none poppins-regular w-full border-none bg-transparent ${inputStyle}`}

@@ -26,7 +26,12 @@ const Testimonials = () => {
       <Marquee className="item_container flex items-center justify-center">
         {testimonials.map((item) => (
           <div className="testimonial_card my-auto bg-white rounded-[9px] min-h-[15rem] p-3 w-[20rem] mr-5">
-            <img src="/icons/quote.svg" alt="" className="mx-auto" />
+            <img
+              loading="lazy"
+              src="/icons/quote.svg"
+              alt=""
+              className="mx-auto"
+            />
             <blockquote className="poppins-regular mb-5 text-center text-[.8rem] custom-multiline-ellipsis">
               {item?.text}
             </blockquote>
