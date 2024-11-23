@@ -93,6 +93,7 @@ const HomeComp = () => {
                   className="outline-none poppins-regular bg-transparent w-full text-[16px] placeholder:text-gray-200 placeholder:text-[13px]"
                   placeholder="Enter Book Title"
                   value={search.title}
+                  onChange={(e) => handleInputChange("title", e.target.value)}
                 />
 
                 <Button
@@ -173,7 +174,7 @@ const HomeComp = () => {
             value={search.author}
             containerStyle="border-solid w-[55%] border-gray-300 border-[1px] rounded-full px-[.9rem] py-3"
             inputStyle="text-[16px]"
-            password
+            password={false}
           />
           <Input
             type="select"
@@ -184,7 +185,7 @@ const HomeComp = () => {
             containerStyle="border-solid border-gray-300 border-[1px] rounded-full px-[.9rem] w-[45%] py-3"
             options={yearOptions}
             inputStyle="text-[16px] w-full"
-            password
+            password={false}
           />
         </div>
         <div className="button_container md:w-[10%] w-[25%]">

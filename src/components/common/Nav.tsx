@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
+import { FaCircleUser } from "react-icons/fa6";
 
 interface NavProps {
   active: number;
@@ -106,7 +107,10 @@ const Nav = ({ active }: NavProps) => {
             <FaUserAlt />
           </button>
           {toggleModal && (
-            <div className="modal_container absolute top-[150%] p-2 bg-white rounded-[6px] h-[8rem] shadow-xl w-[11rem]">
+            <div className="modal_container flex flex-col items-center justify-center gap-3 absolute top-full mt-2 left-1/2 transform -translate-x-1/2 p-2 bg-white rounded-[6px] h-[8rem] shadow-xl w-[11rem]">
+              <div className="profile_icon">
+                <FaCircleUser color="gray" size={30} />
+              </div>
               <button
                 onClick={() => navigate("/login")}
                 className="bg-blue-800 text-white w-full hover:bg-blue-900 rounded-[6px] py-1.5 px-1 text-center font-semibold text-[.9rem] transition-colors duration-300 ease-in-out"
