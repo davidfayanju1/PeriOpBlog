@@ -91,8 +91,8 @@ const Login = () => {
         </div>
       </div>
 
-      <div className="mobile_image_container md:hidden block flex-grow my-auto bg-red-800">
-        <div className="form-container bg-white w-full p-4">
+      <div className="mobile_image_container md:hidden h-full flex items-center justify-center bg-gray-300 flex-grow">
+        <div className="form-container bg-white w-full h-full flex flex-col justify-center p-4">
           <h1 className="poppins-bold text-blue-900 md:text-[3rem] text-[2.5rem]">
             Login
           </h1>
@@ -109,7 +109,7 @@ const Login = () => {
               value={""}
               containerStyle="border-solid mb-5 w-full border-gray-300 border-[1px] rounded-[9px] px-[1rem] py-4"
               inputStyle="text-[16px] placeholder:text-gray-300"
-              password
+              password={false}
             />
             <Input
               placeholder="Enter Preferred Password"
