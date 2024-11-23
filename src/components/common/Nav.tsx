@@ -56,7 +56,7 @@ const Nav = ({ active }: NavProps) => {
   }, [toggle]);
 
   return (
-    <div>
+    <div className="">
       <nav className="item_container z-30 fixed top-0 left-0 flex items-center justify-between w-full min-h-[6rem] bg-white md:px-[5.7rem] px-[1rem]">
         <div className="text_title">
           <Link to={"/"}>
@@ -67,7 +67,7 @@ const Nav = ({ active }: NavProps) => {
         </div>
 
         <ul className="desktop_links md:block hidden">
-          <li className=" flex items-center justify-center gap-[18.5px]">
+          <li className="flex items-center justify-center gap-[18.5px]">
             {links.map((item) => (
               <button
                 onClick={() => route(item)}
@@ -87,7 +87,7 @@ const Nav = ({ active }: NavProps) => {
 
         {toggle && (
           <ul className="mobile_nav block md:hidden bg-white absolute top-[6rem] left-0 w-full p-5 h-screen">
-            <li className=" flex flex-col flex-1 items-start justify-center gap-4">
+            <li className="flex flex-col flex-1 items-start justify-center gap-4">
               {links.map((item) => (
                 <button
                   onClick={() => route(item)}

@@ -31,17 +31,17 @@ const SignUp = () => {
   };
 
   return (
-    <div className="page_container md:min-h-screen">
+    <div className="page_container min-h-screen">
       <div className="flex-Container p-4 flex items-center justify-center w-full h-full">
-        <div className="blue_side md:block relative hidden rounded-[10px] overflow-hidden h-screen w-[50%] bg-blue-800">
-          <div className="overlay absolute top-0 left-0 bottom-0 right-0 bg-blue-900/30"></div>
+        <div className="md:block fixed bg-transparent hidden rounded-[10px] overflow-hidden h-[95vh] w-[47%] top-[2%] left-[1%]">
+          <div className="overlay absolute inset-0 bg-blue-900/30"></div>
           <img
             src="/images/nursesF.jpg"
             alt=""
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-inherit"
           />
 
-          <div className="text_container absolute top-0 right-0 left-0 p-[3rem] bottom-0">
+          <div className="text_container absolute inset-0 p-[3rem]">
             <h1 className="poppins-bold text-[1.5rem] text-white">POB.</h1>
             <div className="text_container mt-[8rem]">
               <span className="text-white poppins-bold text-[2.5rem] block">
@@ -57,7 +57,7 @@ const SignUp = () => {
                 We have the resources you need, all you have to do is signup...
               </span>
 
-              <div className="card_container bg-black w-full px-6 rounded-[10px] min-h-[15rem] pb-3 mt-[10rem] mx-auto">
+              {/* <div className="card_container bg-black w-full px-6 rounded-[10px] min-h-[15rem] pb-3 mt-[10rem] mx-auto">
                 <BiSolidQuoteLeft color="#515151" size={90} />
                 <div className="text_container mt-6">
                   <blockquote className="poppins-regular text-white text-[.9rem]">
@@ -70,11 +70,11 @@ const SignUp = () => {
                     <span className="poppins-light">CEO</span>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
-        <div className="form-container  md:w-[50%] w-full md:px-[3rem] px-0">
+        <div className="form-container md:ml-[50%] md:w-[50%] w-full md:px-[3rem] px-0 md:py-[5rem] pt-[3rem]">
           <h1 className="poppins-bold text-blue-900 md:text-[3rem] text-[2.5rem]">
             Get Started
           </h1>
